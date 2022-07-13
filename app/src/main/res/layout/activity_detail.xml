@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cv_profile"
+        style="@style/civ"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/tvDetail"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cv_profile"
+        app:layout_constraintStart_toStartOf="@id/cv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/cv_profile"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/tvDetail"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        tools:text="Username" />
+
+    <TextView
+        android:id="@+id/tv_following"
+        style="@style/tvDetail.akun.bold"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_followers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_followers"
+        tools:text="Following" />
+
+    <TextView
+        android:id="@+id/tv_followers"
+        style="@style/tvDetail.akun.bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_username"
+        app:layout_constraintStart_toStartOf="@id/tv_username"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"
+        tools:text="Followers" />
+
+    <TextView
+        android:id="@+id/tv_repo"
+        style="@style/tvDetail.akun.bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_followers"
+        app:layout_constraintTop_toTopOf="@id/tv_followers"
+        tools:text="Repository" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        style="@style/tvDetail.akun"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_followers"
+        app:layout_constraintStart_toStartOf="@id/tv_followers"
+        app:layout_constraintTop_toBottomOf="@id/tv_followers"
+        tools:text="Company" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        style="@style/tvDetail.akun"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_location_18dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_company"
+        app:layout_constraintStart_toStartOf="@id/tv_company"
+        app:layout_constraintTop_toBottomOf="@id/tv_company"
+        tools:text="Location" />
+
+    <Button
+        android:id="@+id/btn_share"
+        style="@style/btn"
+        android:layout_marginTop="32dp"
+        android:drawableLeft="@drawable/ic_share_18dp"
+        android:text="@string/btnshare"
+        app:layout_constraintEnd_toEndOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="@id/tv_location"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
